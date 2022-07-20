@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
+import lombok.Builder;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -24,8 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the Entity class for Job module. 
+ * Description : This is the Entity class for Job module.
  * Created Date: 18 April, 2021 
  * Version     : v1.0.0
  *************************************************************************************/

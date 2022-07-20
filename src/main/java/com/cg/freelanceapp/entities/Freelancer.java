@@ -14,11 +14,12 @@ import javax.persistence.SequenceGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Builder;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
+ * @author       million
  * Description : This is the Entity class for Freelancer module. 
- * Created Date: 18 April, 2021 
+ * Created Date: 18 jul, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Entity
@@ -49,9 +50,9 @@ public class Freelancer implements Serializable {
 			CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH })
 	private List<Feedback> feedbacks;
 
-	@OneToMany(mappedBy = "freelancer", targetEntity = SkillExperience.class, cascade = { CascadeType.PERSIST,
-			CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH })
-	private List<SkillExperience> skills;
+//	@OneToMany(mappedBy = "freelancer", targetEntity = SkillExperience.class, cascade = { CascadeType.PERSIST,
+//			CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH })
+//	private List<SkillExperience> skills;
 
 	@OneToMany(mappedBy = "freelancer", targetEntity = BookmarkedJob.class, cascade = { CascadeType.PERSIST,
 			CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH })
@@ -62,7 +63,7 @@ public class Freelancer implements Serializable {
 	}
 
 	public Freelancer(String userName, String firstName, String lastName, String password,
-			List<JobApplication> appliedJobs, List<Feedback> feedbacks, List<SkillExperience> skills,
+			List<JobApplication> appliedJobs, List<Feedback> feedbacks,
 			List<BookmarkedJob> bookmarkedJobs) {
 		super();
 		this.userName = userName;
@@ -71,7 +72,6 @@ public class Freelancer implements Serializable {
 		this.password = password;
 		this.appliedJobs = appliedJobs;
 		this.feedbacks = feedbacks;
-		this.skills = skills;
 		this.bookmarkedJobs = bookmarkedJobs;
 	}
 
@@ -111,9 +111,9 @@ public class Freelancer implements Serializable {
 		return password;
 	}
 
-	public List<SkillExperience> getSkills() {
-		return skills;
-	}
+//	public List<SkillExperience> getSkills() {
+//		return skills;
+//	}
 
 	public void setAppliedJobs(List<JobApplication> appliedJobs) {
 		this.appliedJobs = appliedJobs;
@@ -143,8 +143,8 @@ public class Freelancer implements Serializable {
 		this.password = password;
 	}
 
-	public void setSkills(List<SkillExperience> skills) {
-		this.skills = skills;
-	}
+//	public void setSkills(List<SkillExperience> skills) {
+//		this.skills = skills;
+//	}
 
 }

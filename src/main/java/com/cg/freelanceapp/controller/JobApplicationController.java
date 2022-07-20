@@ -31,9 +31,7 @@ import com.cg.freelanceapp.service.IJobApplicationService;
 import io.swagger.annotations.ApiOperation;
 
 /**************************************************************************************
- * @author Siddhesh
- * Description: This is the rest controller class for JobApplication module. 
- * Created Date: 26 April, 2021 
+ * Description: This is the rest controller class for JobApplication module.
  * Version : v1.0.0
  *************************************************************************************/
 

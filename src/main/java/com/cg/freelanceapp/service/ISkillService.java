@@ -8,12 +8,10 @@ import com.cg.freelanceapp.dto.SkillDTO;
 import com.cg.freelanceapp.entities.Skill;
 
 /**************************************************************************************
- * @author       Amruth N 
- * Description : This is the Service Interface for SkillService module. 
- * Created Date: 21 April, 2021 
+ * Description : This is the Service Interface for SkillService module.
  * Version     : v1.0.0
  *************************************************************************************/
-@Service
+//@Service
 public interface ISkillService {
 
 	Skill findById(Long id);

@@ -26,8 +26,7 @@ import com.cg.freelanceapp.exceptions.JobPortalValidationException;
 import com.cg.freelanceapp.service.IFreelancerService;
 
 /**************************************************************************************
- * @author Aditya
- * Description: Rest controller class for Freelancer module. 
+ * Description: Rest controller class for Freelancer module.
  *************************************************************************************/
 @RestController
 @RequestMapping("/freelancer")

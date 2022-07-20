@@ -1,8 +1,7 @@
 package com.cg.freelanceapp.exceptions;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : Invalid Bookmarked Freelancer Exception class. 
+ * Description : Invalid Bookmarked Freelancer Exception class.
  * Created Date: 22 April, 2021 
  * Version     : v1.0.0
  *************************************************************************************/

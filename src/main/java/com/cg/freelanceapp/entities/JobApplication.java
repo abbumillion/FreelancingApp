@@ -17,10 +17,11 @@ import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Builder;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the Entity class for JobApplication module. 
+ * Author Million
+ * Description : This is the Entity class for JobApplication module.
  * Created Date: 18 April, 2021 
  * Version     : v1.0.0
  *************************************************************************************/

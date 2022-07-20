@@ -1,13 +1,16 @@
 package com.cg.freelanceapp.service;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.cg.freelanceapp.dto.JobDTO;
 import com.cg.freelanceapp.entities.Job;
 
-@Service
+/**************************************************************************************
+ * Author million
+ * Description : This is the Service Interface for job module.
+ * Created Date: 1 jun, 2022
+ * Version     : v1.0.0
+ *************************************************************************************/
+
 public interface IJobService {
 
 	void close(Long id);

@@ -13,9 +13,9 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the Entity class for Admin module. 
- * Created Date: 18 April, 2021 
+ * Author yordanos
+ * Description : This is the Entity class for Admin module.
+ * Created Date: 18 may, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Entity
@@ -34,8 +34,13 @@ public class Admin implements Serializable {
 	@Column(nullable = false)
 	private String firstName;
 	private String lastName;
+	@Column(nullable = false, unique = true, length = 30)
+	private String emailAddress;
+	@Column(nullable = false, unique = true, length = 20)
+	private String phoneNumber;
 	@Column(nullable = false)
 	private String password;
+
 
 	public Admin() {
 		super();
@@ -83,6 +88,22 @@ public class Admin implements Serializable {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public void setPassword(String password) {

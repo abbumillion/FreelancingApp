@@ -9,8 +9,12 @@ import com.cg.freelanceapp.dto.BookmarkedJobListDTO;
 import com.cg.freelanceapp.entities.BookmarkedJob;
 
 
-
-@Service
+/**************************************************************************************
+ * Author thomas
+ * Description : This is the Service Interface for bookmarked job module.
+ *  jun 16 2022
+ * Version     : v1.0.0
+ *************************************************************************************/
 public interface IBookmarkedJobService {
 
 	BookmarkedJob bookmarkJob(BookmarkedJobDTO bjd);

@@ -11,7 +11,7 @@ import com.cg.freelanceapp.dto.FreelancerListDTO;
 import com.cg.freelanceapp.entities.Freelancer;
 
 /**************************************************************************************
- * @author Aditya 
+ * @author yordanos
  * Description: This is the DAO Interface for Freelancer module. 
  * Created Date: 19 April, 2021 
  * Version : v1.0.0

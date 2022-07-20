@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : Bookmarked Freelancer Validation class. 
- * Created Date: 22 April, 2021 
+ * Description : Bookmarked Freelancer Validation class.
+ * Created Date: 22 jun, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 public class JobPortalValidationException extends RuntimeException {

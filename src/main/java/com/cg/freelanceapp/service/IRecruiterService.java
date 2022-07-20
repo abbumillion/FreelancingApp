@@ -9,12 +9,11 @@ import com.cg.freelanceapp.dto.RecruiterListDTO;
 import com.cg.freelanceapp.entities.Recruiter;
 
 /**************************************************************************************
- * @author       Aditya 
- * Description : This is the Service Interface for Recruiter module. 
- * Created Date: 21 April, 2021 
+ * Author million
+ * Description : This is the Service Interface for Recruiter module.
+ * Created Date: 11 jun, 2022
  * Version     : v1.0.0
  *************************************************************************************/
-@Service
 public interface IRecruiterService {
 
 	Recruiter findById(Long id);

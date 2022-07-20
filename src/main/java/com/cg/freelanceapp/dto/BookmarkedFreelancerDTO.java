@@ -3,8 +3,7 @@ package com.cg.freelanceapp.dto;
 import javax.validation.constraints.NotNull;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the DTO class for BookmarkedFreelancer module. 
+ * Description : This is the DTO class for BookmarkedFreelancer module.
  * Created Date: 21 April, 2021 
  * Version     : v1.0.0
  *************************************************************************************/

@@ -1,15 +1,10 @@
 package com.cg.freelanceapp.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.freelanceapp.dto.AdminDTO;
 import com.cg.freelanceapp.entities.Admin;
 import com.cg.freelanceapp.exceptions.InvalidAdminException;
-import com.cg.freelanceapp.exceptions.JobPortalValidationException;
 import com.cg.freelanceapp.service.IAdminService;
 
 /**
@@ -41,35 +35,34 @@ public class AdminController {
 	IAdminService adminService;
 
 	/**
-	 * 
-	 * @param        admin
-	 * @return       Response Entity of Object type
+	 * @param admin
+	 * @return Response Entity of Object type
 	 * Description : This method creates a new entry for an admin.
 	 * @PostMapping: maps HTTP POST requests onto specific handler methods.
-	 * 
 	 */
 
-	@PostMapping("/save")
-	public ResponseEntity<Object> adminSave(@Valid @RequestBody AdminDTO adminDto, BindingResult bindingResult) {
+	@RequestMapping("/save")
+	public Admin adminSave(AdminDTO adminDto) {
+		System.out.println("hii server");
 		System.out.println(adminDto.toString());
-		if (bindingResult.hasErrors()) {
-			System.out.println("Some errors exist!");
-			List<FieldError> fieldErrors = bindingResult.getFieldErrors();
+//		if (bindingResult.hasErrors()) {
+//			System.out.println("Some errors exist!");
+//			List<FieldError> fieldErrors = bindingResult.getFieldErrors();
 
-			List<String> errMessages = new ArrayList<>();
-			for (FieldError fe : fieldErrors) {
-				errMessages.add(fe.getDefaultMessage());
-			}
-			throw new JobPortalValidationException(errMessages);
-		}
-		try {
-			adminService.save(adminDto);
-			return new ResponseEntity<>("Admin Successfully", HttpStatus.ACCEPTED);
-		} catch (InvalidAdminException exception) {
-			throw new InvalidAdminException("Could not save new Admin");
-		}
+//		List<String> errMessages = new ArrayList<>();
+//		for (FieldError fe : fieldErrors) {
+//			errMessages.add(fe.getDefaultMessage());
+//		}
+//		throw new JobPortalValidationException(errMessages);
+
+//		try {
+		return adminService.save(adminDto);
+//			return new ResponseEntity<>("Admin Successfully", HttpStatus.ACCEPTED);
+//		} catch (InvalidAdminException exception) {
+//			throw new InvalidAdminException("Could not save new Admin");
 
 	}
+
 
 	/**
 	 * 
@@ -101,10 +94,10 @@ public class AdminController {
 	 * 
 	 */
 
-	@GetMapping(value = "/find/id/{id}")
+	@GetMapping(value = "/find/id")
 	public Admin findById(@PathVariable Long id) {
 		try {
-			return adminService.findById(id);
+			return adminService.findById(2l);
 		} catch (InvalidAdminException exception) {
 			throw new InvalidAdminException("Id not found");
 		}
@@ -119,7 +112,7 @@ public class AdminController {
 	 * 
 	 */
 
-	@GetMapping(value = "/find/name/{userName}")
+	@GetMapping(value = "/find/{userName}")
 	public Admin findByUserName(@PathVariable String userName) {
 		try {
 			return adminService.findByUserName(userName);

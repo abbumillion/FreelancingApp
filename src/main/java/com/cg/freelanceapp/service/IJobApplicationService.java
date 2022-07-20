@@ -9,13 +9,12 @@ import com.cg.freelanceapp.dto.JobApplicationsListDTO;
 import com.cg.freelanceapp.entities.JobApplication;
 
 /**************************************************************************************
- * @author       Siddhesh
- * Description : This is the Service Interface for JobApplication module. 
- * Created Date: 26 April, 2021 
+ * Author yordanos
+ * Description : This is the Service Interface for JobApplication module.
  * Version     : v1.0.0
  *************************************************************************************/
 
-@Service
+//@Service
 public interface IJobApplicationService {
 
 	JobApplication applyToJob(JobApplicationDTO jobApplicationDto);

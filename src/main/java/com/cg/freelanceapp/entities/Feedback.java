@@ -14,11 +14,12 @@ import javax.persistence.SequenceGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Builder;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
+ * @author    million
  * Description : This is the Entity class for Feedback module. 
- * Created Date: 18 April, 2021 
+ * Created Date: 18 jun, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Entity

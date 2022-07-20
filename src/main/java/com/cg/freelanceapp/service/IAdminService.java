@@ -1,11 +1,17 @@
 package com.cg.freelanceapp.service;
 
-import org.springframework.stereotype.Service;
 
 import com.cg.freelanceapp.dto.AdminDTO;
 import com.cg.freelanceapp.entities.Admin;
+import java.util.List;
 
-@Service
+/**************************************************************************************
+ * Author thomas
+ * Description : This is the Service Interface for Freelancer module.
+ *  jun 9 2022
+ * Version     : v1.0.0
+ *************************************************************************************/
+
 public interface IAdminService {
 	Admin findById(Long id);
 
@@ -14,5 +20,7 @@ public interface IAdminService {
 	Admin update(Long id, AdminDTO adminDto);
 	
 	Admin findByUserName(String userName);
+
+	List<Admin> findAll();
 
 }

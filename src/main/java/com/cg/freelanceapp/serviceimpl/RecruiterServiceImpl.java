@@ -14,9 +14,9 @@ import com.cg.freelanceapp.exceptions.InvalidRecruiterException;
 import com.cg.freelanceapp.service.IRecruiterService;
 
 /**************************************************************************************
- * @author       Aditya 
+ * @author       million
  * Description : This is the Service Implementation for Recruiter module. 
- * Created Date: 21 April, 2021 
+ * Created Date: 21 may, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Service
@@ -53,8 +53,12 @@ public class RecruiterServiceImpl implements IRecruiterService {
 		recruiter.setLastName(recruiterDto.getLastName());
 		recruiter.setUserName(recruiterDto.getUserName());
 		recruiter.setPassword(recruiterDto.getPassword());
+		recruiter.setEmailAddress(recruiterDto.getEmailAddress());
+		recruiter.setPhoneNumber(recruiterDto.getPhoneNumber());
 		if (!(recruiterDto.getFirstName() == null || recruiterDto.getLastName() == null
-				|| recruiterDto.getUserName() == null || recruiterDto.getPassword() == null))
+				|| recruiterDto.getUserName() == null || recruiterDto.getPassword() == null
+				|| recruiterDto.getEmailAddress() == null || recruiterDto.getPhoneNumber() == null
+		))
 			return recruiterDao.save(recruiter);
 		else
 			throw new InvalidRecruiterException();
@@ -80,6 +84,19 @@ public class RecruiterServiceImpl implements IRecruiterService {
 		} else {
 			throw new InvalidRecruiterException();
 		}
+	}
+
+	private Recruiter buildRecruiter(RecruiterDTO recruiterDTO)
+	{
+		//
+		Recruiter recruiter = new Recruiter();
+		recruiter.setFirstName(recruiterDTO.getFirstName());
+		recruiter.setLastName(recruiterDTO.getLastName());
+		recruiter.setUserName(recruiterDTO.getUserName());
+		recruiter.setPassword(recruiterDTO.getPassword());
+		recruiter.setEmailAddress(recruiterDTO.getEmailAddress());
+		recruiter.setPhoneNumber(recruiterDTO.getPhoneNumber());
+		return recruiter;
 	}
 
 	@Override

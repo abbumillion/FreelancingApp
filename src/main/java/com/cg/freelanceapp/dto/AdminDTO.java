@@ -4,7 +4,6 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  * 
- * @author      Vishnuvardhan Reddy
  * Description: This is the DTO class for Admin module
  *
  */
@@ -18,17 +17,25 @@ public class AdminDTO {
 	private String lastName;
 	@NotEmpty(message = "Password cant be empty")
 	private String password;
+	@NotEmpty(message = "email cant be empty")
+	private String emailAddress;
+	@NotEmpty(message = "phone cant be empty")
+	private String phoneNumber;
 
 	public AdminDTO() {
+
 		super();
+		System.out.println("adminDTo");
 	}
 
-	public AdminDTO(String userName, String firstName, String lastName, String password) {
+	public AdminDTO(String userName, String firstName, String lastName,String emailAddress, String phoneNumber, String password) {
 		super();
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getFirstName() {
@@ -47,6 +54,14 @@ public class AdminDTO {
 		return userName;
 	}
 
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -62,6 +77,8 @@ public class AdminDTO {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+	public void setEmailAddress(String emailAddress){ this.emailAddress = emailAddress;}
+	public void setPhoneNumber(String phoneNumber){ this.phoneNumber = phoneNumber;}
 
 	@Override
 	public String toString() {

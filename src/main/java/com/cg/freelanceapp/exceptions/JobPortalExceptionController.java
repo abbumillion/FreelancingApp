@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the Controller advice for the whole project. 
+ * Description : This is the Controller advice for the whole project.
  * 				 It tells the rest controllers to process different 
  * 				 exceptions and parse the output accordingly. 
- * Created Date: 22 April, 2021 
+ * Created Date: 22 jun, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @RestControllerAdvice

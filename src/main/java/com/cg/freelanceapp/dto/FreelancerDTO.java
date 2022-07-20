@@ -3,7 +3,7 @@ package com.cg.freelanceapp.dto;
 import javax.validation.constraints.NotEmpty;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
+ * @author       thomas
  * Description : This is the DTO class for Freelancer module. 
  * Created Date: 21 April, 2021 
  * Version     : v1.0.0
@@ -17,17 +17,23 @@ public class FreelancerDTO {
 	private String lastName;
 	@NotEmpty(message = "password cannot be empty")
 	private String password;
+	@NotEmpty(message = "email cant be empty")
+	private String emailAddress;
+	@NotEmpty(message = "phone cant be empty")
+	private String phoneNumber;
 
 	public FreelancerDTO() {
 		super();
 	}
 
-	public FreelancerDTO(String userName, String firstName, String lastName, String password) {
+	public FreelancerDTO(String userName, String firstName, String lastName,String emailAddress, String phoneNumber, String password) {
 		super();
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getFirstName() {
@@ -46,6 +52,14 @@ public class FreelancerDTO {
 		return userName;
 	}
 
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -62,4 +76,11 @@ public class FreelancerDTO {
 		this.userName = userName;
 	}
 
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 }

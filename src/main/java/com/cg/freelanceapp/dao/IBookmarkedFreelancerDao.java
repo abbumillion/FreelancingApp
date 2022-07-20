@@ -13,8 +13,7 @@ import com.cg.freelanceapp.entities.BookmarkedFreelancer;
 import com.cg.freelanceapp.entities.Skill;
 
 /**************************************************************************************
- * @author Vishnuvardhan 
- * Description: This is the DAO Interface for BookmarkedFreelancer module. 
+ * Description: This is the DAO Interface for BookmarkedFreelancer module.
  * Created Date: 19 April, 2021 
  * Version : v1.0.0
  *************************************************************************************/

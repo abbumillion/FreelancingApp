@@ -1,28 +1,17 @@
 package com.cg.freelanceapp.entities;
 
-import java.io.Serializable;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.SequenceGenerator;
-
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
+ * @author       thomas
  * Description : This is the Entity class for BookmarkedJob module. 
- * Created Date: 18 April, 2021 
+ * Created Date: 18 jul, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Entity

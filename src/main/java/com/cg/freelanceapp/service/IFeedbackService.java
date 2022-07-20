@@ -8,7 +8,12 @@ import com.cg.freelanceapp.dto.FeedbackDTO;
 import com.cg.freelanceapp.dto.FeedbackListDTO;
 import com.cg.freelanceapp.entities.Feedback;
 
-@Service
+/**************************************************************************************
+ * Author thomas
+ * Description : This is the Service Interface for feedback module.
+ *  jun 16 2022
+ * Version     : v1.0.0
+ *************************************************************************************/
 public interface IFeedbackService {
 
 	Float averageRating(String id);

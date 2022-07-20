@@ -11,12 +11,12 @@ import com.cg.freelanceapp.dto.FreelancerListDTO;
 import com.cg.freelanceapp.entities.Freelancer;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the Service Interface for Freelancer module. 
- * Created Date: 21 April, 2021 
+ * Author thomas
+ * Description : This is the Service Interface for Freelancer module.
+ *  jun 16 2022
  * Version     : v1.0.0
  *************************************************************************************/
-@Service
+//@Service
 public interface IFreelancerService {
 
 	Freelancer findById(Long id);

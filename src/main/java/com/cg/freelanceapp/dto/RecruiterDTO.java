@@ -3,8 +3,8 @@ package com.cg.freelanceapp.dto;
 import javax.validation.constraints.NotEmpty;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
- * Description : This is the DTO class for Recruiter module. 
+ * Author million
+ * Description : This is the DTO class for Recruiter module.
  * Created Date: 21 April, 2021 
  * Version     : v1.0.0
  *************************************************************************************/
@@ -18,17 +18,23 @@ public class RecruiterDTO {
 	private String lastName;
 	@NotEmpty(message = "password cannot be blank")
 	private String password;
+	@NotEmpty(message = "email cant be empty")
+	private String emailAddress;
+	@NotEmpty(message = "phone cant be empty")
+	private String phoneNumber;
 
 	public RecruiterDTO() {
 		super();
 	}
 
-	public RecruiterDTO(String userName, String firstName, String lastName, String password) {
+	public RecruiterDTO(String userName, String firstName, String lastName,String emailAddress, String phoneNumber, String password) {
 		super();
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getFirstName() {
@@ -47,6 +53,14 @@ public class RecruiterDTO {
 		return userName;
 	}
 
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -61,6 +75,14 @@ public class RecruiterDTO {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	@Override

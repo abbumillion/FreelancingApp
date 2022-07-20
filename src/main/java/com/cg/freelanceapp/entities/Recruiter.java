@@ -14,11 +14,12 @@ import javax.persistence.SequenceGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Builder;
 
 /**************************************************************************************
- * @author       Vishnuvardhan 
+ * @author       yordanos
  * Description : This is the Entity class for Recruiter module. 
- * Created Date: 18 April, 2021 
+ * Created Date: 18 jun, 2022
  * Version     : v1.0.0
  *************************************************************************************/
 @Entity
@@ -40,6 +41,10 @@ public class Recruiter implements Serializable {
 	private String lastName;
 	@Column(nullable = false)
 	private String password;
+	@Column( unique = true, length = 30)
+	private String emailAddress;
+	@Column( unique = true, length = 20)
+	private String phoneNumber;
 
 	@OneToMany(mappedBy = "postedBy", targetEntity = Job.class, cascade = { CascadeType.PERSIST, CascadeType.MERGE,
 			CascadeType.REFRESH, CascadeType.DETACH })
@@ -133,4 +138,19 @@ public class Recruiter implements Serializable {
 		this.password = password;
 	}
 
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 }
